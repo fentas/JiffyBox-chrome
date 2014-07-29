@@ -78,7 +78,9 @@
 }
 
 #search-container input {
-    width: 130px;
+  width: 184px;
+  border-radius: 3px;
+  border: 1px solid #CCC;
 }
 
 #tab-container .tab.active, body.searching #search-container {

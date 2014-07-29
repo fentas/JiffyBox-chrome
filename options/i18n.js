@@ -16,9 +16,9 @@ this.i18n = {
         "en": "No matches were found.",
         "de": "Keine Übereinstimmungen gefunden."
     },
-    
-    
-    
+
+
+
     "information": {
         "en": "Information",
         "de": "Information"
@@ -40,7 +40,7 @@ this.i18n = {
 		You need the so-called \"API-Token\", which you can find in the Control Panel under <br> \
 		<b>\"Stammdaten\" >> \"API-Zugriff\"</b>. <br><br> \
 		In order to do so login into your <a href=\"https://admin.jiffybox.de/\" target=\"_blank\" alt=\"JiffyBOX\"> JiffyBOX control panal</a>.",
-        
+
         "de": "Für skriptgesteuerte Bedienung Ihres JiffyBox-Accounts steht eine Zugriffsmöglichkeit über eine Schnittstelle zur Verfügung. <br> \
  		Hierfür	benötigen Sie den sogenannten \"API-Token\", den Sie im Control-Panel unter \"Stammdaten\", \"API-Zugriff\" erstellen können. <br><br> \
 		Loggen Sie sich dazu in ihrer <a href=\"https://admin.jiffybox.de/\" target=\"_blank\" alt=\"JiffyBOX\">JiffyBOX Admin Verwaltung</a> an."
@@ -92,5 +92,17 @@ this.i18n = {
 	"shutdown": {
 		"en": "Closing Chrome shutdown all JiffyBOXes",
 		"de": "Beim Schliessen von Chrome alle JiffyBOXes herunterfahren"
+	},
+	"donation": {
+		"en": "Donation",
+		"de": "Spende"
+	},
+	"comment": {
+		"en": "Please help me to finance my every cup of tea. Every coin is appreciated.<br><br>Sick of tea? That’s like being sick of *breathing*! - Uncle Iroh",
+		"de": "Bitte helft mir damit ich mir meine t&auml;gliche Tasse Tee leisten kann.<br><br>Sick of tea? That’s like being sick of *breathing*! - Uncle Iroh"
+	},
+	"license": {
+		"en": "License",
+		"de": "Lizenz"
 	}
 };

@@ -6,6 +6,10 @@ html, body {
 	font-size: 11px;
 }
 
+section {
+	display: none;
+}
+
 .options {
 	height: 24px;
 	vertical-align: middle;
@@ -33,7 +37,7 @@ html, body {
 }
 
 .jiffyboxes {
-	
+
 }
 
 .jiffyboxes > .jiffybox {
@@ -41,6 +45,7 @@ html, body {
 	border: 1px solid #CDD3E1;
 	background-color: #E1E7F1;
 	color: #000;
+	margin: 2px;
 }
 
 .jiffyboxes > .jiffybox > .details {
@@ -96,18 +101,19 @@ html, body {
 	font-size: 9px;
 }
 .controls {
-	
+
 }
 .jiffyboxes > .jiffybox > .overview > .controls > div {
 	cursor: pointer;
 	color: #246DB3;
+	display: inline-block;
 }
 .controls > div:hover {
 	text-decoration:underline;
 }
-	
+
 .FROZEN {
-	
+
 }
 
 .READY.RUNNING .status {

@@ -1,35 +1,38 @@
 {
-	"manifest_version": 2,
-	"name": "JiffyBox",
-	"version": "0.3.2",
+  "manifest_version": 2,
+  "name": "JiffyBox",
+  "version": "0.3.2",
 
-	"default_locale": "en",
-	"description": "__MSG_extension_description__",
-	"icons": {
-		"16": "icons/icon16.png",
-		"32": "icons/icon32.png",
-		"48": "icons/icon48.png",
-		"128": "icons/icon128.png"
+  "default_locale": "en",
+  "description": "__MSG_extension_description__",
+  "icons": {
+    "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "19": "icons/icon19.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    },
+    "default_popup": "popup.html"
+  },
+
+  "author": "Jan Guth",
+
+  "background": {
+		"page": "background.html"
 	},
-
-	"browser_action": {
-		"default_icon": {
-			"16": "icons/icon16.png",
-			"32": "icons/icon32.png",
-			"48": "icons/icon48.png"
-		},
-		"default_popup": "popup.html"
-	},
-
-	"author": "Jan Guth",
-	"homepage_url": "jan.guth.so",
-
-	"background": "background.html",
-	"options_page": "fancy-settings/source/index.html",
-	"incognito": "spanning",
-	"permissions": [
-		"notifications",
-		"tabs",
-		"https://api.jiffybox.de/"
-	]
+  "options_page": "options/index.html",
+  "incognito": "spanning",
+  "permissions": [
+    "notifications",
+    "tabs",
+    "https://api.jiffybox.de/"
+  ]
 }
