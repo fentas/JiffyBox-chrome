@@ -7,11 +7,11 @@
 	<script src="core/js/jiffybox.js" type="text/javascript" charset="utf-8"></script>
 
 	<script type="text/javascript">
-	
+
 		var store = new window.Store('settings');
 		$.jiffybox.token = store.get('token');
 		$.jiffybox.load();
-	
+
 		function reload_jiffybox(json) {
 			if ( json.result ) {
 				// update all open views
@@ -20,7 +20,7 @@
 						view.reload_ui(json.result.id);
 					}
 				});
-				
+
 				if ( /^(UPDATING|FREEZING|THAWING|STOPPING|STARTING)$/.test(json.result.status) ) {
 					// max 30 calls per minute -- make 15 calls/minute
 					setTimeout(function() {
@@ -37,7 +37,7 @@
 						);
 						notification.show();
 					}
-					
+
 					if ( store.get('starting') && json.result.running )
 					{
 						var url = store.get('url')[json.result.id];
@@ -61,7 +61,7 @@
 			}
 			return false;
 		}
-		
+
 		window.onbeforeunload = function() {
 			if ( store.get('shutdown') ) {
 				var boxes = $.jiffybox.get();
@@ -70,6 +70,6 @@
 				}
 			}
 		}
-		
+
 	</script>
 </html>
