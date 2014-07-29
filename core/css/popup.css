@@ -1,0 +1,119 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	font-family: Verdana, Arial;
+	font-size: 11px;
+}
+
+.options {
+	height: 24px;
+	vertical-align: middle;
+}
+.options > div:hover {
+	text-decoration:underline;
+}
+
+.options > div {
+	padding: 4px;
+	vertical-align: top;
+	cursor: pointer;
+	color: #246DB3;
+}
+.options > .reload > .icon {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../images/arrow_refresh.png') no-repeat;
+	float: left;
+	margin-right: 5px;
+}
+.options > .reload > div:nth-child(2) {
+	margin: 2px;
+}
+
+.jiffyboxes {
+	
+}
+
+.jiffyboxes > .jiffybox {
+	border-radius: 4px;
+	border: 1px solid #CDD3E1;
+	background-color: #E1E7F1;
+	color: #000;
+}
+
+.jiffyboxes > .jiffybox > .details {
+	display: none;
+	margin: 4px;
+}
+
+.details > div {
+	padding-top: 6px;
+}
+.details > div > div {
+	vertical-align: top;
+	display: inline-block;
+	width: 127px;
+}
+
+.details input {
+	border: 1px solid #C3D7E6;
+	height: 17px;
+	width: 159px;
+	border-radius: 2px;
+}
+
+.jiffyboxes > .jiffybox > .overview {
+	margin: 4px;
+	height: 26px;
+}
+.name {
+	font-weight: bold;
+	cursor: pointer;
+}
+.status {
+	color: #D1D1D1;
+}
+
+.jiffyboxes > .jiffybox > .overview > .main {
+	display: inline-block;
+	width: 130px;
+	float:left;
+}
+.infos {
+	display: inline-block;
+	width: 100px;
+	float:left;
+	height: 26px;
+}
+.infos select {
+	border: 1px solid #C3D7E6;
+	height: 15px;
+	border-radius: 2px;
+	margin: 0;
+	padding: 0;
+	font-size: 9px;
+}
+.controls {
+	
+}
+.jiffyboxes > .jiffybox > .overview > .controls > div {
+	cursor: pointer;
+	color: #246DB3;
+}
+.controls > div:hover {
+	text-decoration:underline;
+}
+	
+.FROZEN {
+	
+}
+
+.READY.RUNNING .status {
+	cursor: pointer;
+	color: #246DB3;
+}
+.READY.RUNNING .status:hover {
+	text-decoration:underline;
+}

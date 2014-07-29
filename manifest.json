@@ -1,0 +1,27 @@
+{
+	"name": "__MSG_extension_name__",
+	"version": "0.3.1",
+	
+	"default_locale": "en",
+	"description": "__MSG_extension_description__",
+	"icons": {
+		"16": "icons/icon16.ico",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	
+	"browser_action": {
+		"default_icon": "icons/icon16.ico",
+		"default_popup": "popup.html"
+	},
+	"background": "background.html",
+	"options_page": "fancy-settings/source/index.html",
+//	"content_security_policy": "default-src 'self' ",
+//	"homepage_url": "http://jan.guth.so/jiffybox/",
+	"incognito": "spanning",
+	"permissions": [
+		"notifications",
+		"tabs",
+		"https://api.jiffybox.de/"
+	]
+}

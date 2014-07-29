@@ -1,0 +1,75 @@
+<html>
+	<!-- localstore -->
+	<script src="fancy-settings/source/lib/store.js" type="text/javascript" charset="utf-8"></script>
+
+	<!-- JiffyBOX-->
+	<script src="core/js/jquery-core.js" type="text/javascript" charset="utf-8"></script>
+	<script src="core/js/jiffybox.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+	
+		var store = new window.Store('settings');
+		$.jiffybox.token = store.get('token');
+		$.jiffybox.load();
+	
+		function reload_jiffybox(json) {
+			if ( json.result ) {
+				// update all open views
+				$.each(chrome.extension.getViews(), function(index, view) {
+					if ( $.isFunction(view.reload_ui) ) {
+						view.reload_ui(json.result.id);
+					}
+				});
+				
+				if ( /^(UPDATING|FREEZING|THAWING|STOPPING|STARTING)$/.test(json.result.status) ) {
+					// max 30 calls per minute -- make 15 calls/minute
+					setTimeout(function() {
+						$.jiffybox(json.result.id).jiffyBox(reload_jiffybox);
+					}, 5000);
+				}
+				else {
+					// Show a notification
+					if ( store.get('notification') ) {
+						var notification = webkitNotifications.createNotification(
+						  'icons/icon48.png',  // icon url - can be relative
+						  json.result.name,  // notification title
+						  'New status: ' + json.result.status // notification body text
+						);
+						notification.show();
+					}
+					
+					if ( store.get('starting') && json.result.running )
+					{
+						var url = store.get('url')[json.result.id];
+						if ( url ) {
+							url = (/^http:\/\/.*/.test(url) ? url : 'http://' + url);
+							chrome.tabs.create({'url': url}, function(tab) {
+							  	// Tab opened.
+							});
+						}
+					}
+				}
+				return true;
+			}
+			else {
+				var notification = webkitNotifications.createNotification(
+				  'icons/icon48.png',  // icon url - can be relative
+				  'error',  // notification title
+				  json.messages[0].message // notification body text
+				);
+				notification.show();
+			}
+			return false;
+		}
+		
+		window.onbeforeunload = function() {
+			if ( store.get('shutdown') ) {
+				var boxes = $.jiffybox.get();
+				for ( id  in boxes ) {
+					boxes[id].shutdown();
+				}
+			}
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,10 @@
+{
+	"extension_name": {
+		"message": "JiffyBOX",
+		"description": "Extension name"
+	},
+	"extension_description": {
+		"message": "Manage your JiffyBox much quicker!",
+		"description": "Extension description"
+	}
+}
