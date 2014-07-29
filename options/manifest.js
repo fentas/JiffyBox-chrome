@@ -69,7 +69,7 @@ this.manifest = {
     "group": i18n.get("license"),
     "name": "license",
     "type": "description",
-    "text": "<a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU General Public License, version 2</a>"
+    "text": "<a href='http://choosealicense.com/licenses/agpl-3.0/'>GNU Affero GPL v3.0</a>"
   }, {
     "tab": i18n.get("donation"),
     "group": " ",
